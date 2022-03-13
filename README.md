@@ -3,38 +3,6 @@
 ## Creational
 Creational – deals with the process of creation of objects of classes.
 
-Builder – object is built peace by peace not all at once. Builder removes this logic of object construction from client code and abstracts it to separate Class.
-
-Case: There are classes without setters, called "Immutable Classes". They are used in distributed and multi-threaded programs where multiple threads can alter the states of an object. Developers use 'synchronize' to prevent this.
-Since Immutable classes does not have setters all they properties squeezed into constructor and object creation looks very ugly. Here Builder patterns comes into the picture. It allows to build object peace by peace using method chaining and hides this ugly constructor inside builder class.
-
-1.	Abstract/Interface Builder is not required if class itself is not part of inheritance hierarchy.
-      You can directly create concrete Builder
-2.	Implement Builder as inner static class is a good practice
-3.	But Builder as a separate class allows us to work with legacy code and libraries
-4.	The Director is rarely implemented as separate class usually code client handles that role.
-
-EXAMPLE: of Builder pattern in Java Calendar.Builder.
-PITFALLS:  Created object maybe corrupted if client forgets to set some property - if will be set to null by default.
-
-
-![img.png](util.files/img.png)
-
-
-## Factory Method pattern vs Abstract Factory
-
-FACTORY METHOD - Use Factory design pattern when you want to define the class of an object at runtime.
-It also allows you to encapsulate object creation so that you can keep all object creation code in one place.
-
-Example: When creating new Provider User provides Provider type at runtime
-
-
-![img_12.png](util.files/img_12.png)
-
-What if instead of 3 provider types we have 1000 and ant to add more?
-In this case Factory method pattern gets complicated to maintain and update
-
-
 ## Abstract Factory
 Abstract Factory patterns work around a super-factory (MedicationFactory) which creates other factories.
 This factory is also called as factory of factories.
@@ -53,6 +21,36 @@ Advantage of: Abstract Factory over Factory Method
 -	Easy to extend when more classes added
 
 ![img_1.png](util.files/img_1.png)
+
+## Factory Method pattern vs Abstract Factory
+
+Factory Method- Uses Factory design pattern when you want to define the class of an object at runtime.
+It also allows you to encapsulate object creation so that you can keep all object creation code in one place.
+
+Example: When creating new Provider User provides Provider type at runtime
+
+
+![img_12.png](util.files/img_12.png)
+
+What if instead of 3 provider types we have 1000 and ant to add more?
+In this case Factory method pattern gets complicated to maintain and update
+
+Builder – object is built peace by peace not all at once. Builder removes this logic of object construction from client code and abstracts it to separate Class.
+
+Case: There are classes without setters, called "Immutable Classes". They are used in distributed and multi-threaded programs where multiple threads can alter the states of an object. Developers use 'synchronize' to prevent this.
+Since Immutable classes does not have setters all they properties squeezed into constructor and object creation looks very ugly. Here Builder patterns comes into the picture. It allows to build object peace by peace using method chaining and hides this ugly constructor inside builder class.
+
+1.	Abstract/Interface Builder is not required if class itself is not part of inheritance hierarchy.
+      You can directly create concrete Builder
+2.	Implement Builder as inner static class is a good practice
+3.	But Builder as a separate class allows us to work with legacy code and libraries
+4.	The Director is rarely implemented as separate class usually code client handles that role.
+
+EXAMPLE: of Builder pattern in Java Calendar.Builder.
+PITFALLS:  Created object maybe corrupted if client forgets to set some property - if will be set to null by default.
+
+
+![img.png](util.files/img.png)
 
 ## Singleton
 The singleton pattern is used to limit creation of a class to only one object. This is beneficial when one (and only one) object is needed to coordinate actions across the system.
@@ -123,7 +121,9 @@ So instead of updating all our code we can create and AdaperClass which will ado
 We have class Prescription with method prescribeProtonPumpInhibitor(Omeprazole medication) it takes instance of Omeprazole class as a parameter so we cannot provide Nexium or any other medication which is does not implement Omeprazole interface
 
 Solution: Create new class EsomeprazoleAdapter implement Omeprazole
+
 ![img_9.png](util.files/img_9.png)
+
 Inside of our Adapter class we create object of Class we want to provide instead Omeprazole.
 Override Omeprazole functions such they call Esomeprazole functions
 
