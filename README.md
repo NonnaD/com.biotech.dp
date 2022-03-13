@@ -35,6 +35,8 @@ Example: When creating new Provider User provides Provider type at runtime
 What if instead of 3 provider types we have 1000 and ant to add more?
 In this case Factory method pattern gets complicated to maintain and update
 
+## Builder
+
 Builder – object is built peace by peace not all at once. Builder removes this logic of object construction from client code and abstracts it to separate Class.
 
 Case: There are classes without setters, called "Immutable Classes". They are used in distributed and multi-threaded programs where multiple threads can alter the states of an object. Developers use 'synchronize' to prevent this.
