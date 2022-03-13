@@ -1,4 +1,4 @@
-package structural;
+package structural.unknown;
 
 public class AppRunner {
     public static void main(String[] args) {

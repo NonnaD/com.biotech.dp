@@ -1,4 +1,4 @@
-package structural;
+package structural.unknown;
 
 public class EsomeprazoleAdapter implements Omeprazole{
     Esomeprazole esomeprazole;

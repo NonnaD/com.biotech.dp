@@ -1,4 +1,4 @@
-package structural;
+package structural.unknown;
 
 public interface Esomeprazole {
     int dosage();
