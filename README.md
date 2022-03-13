@@ -135,6 +135,7 @@ Override Omeprazole functions such they call Esomeprazole functions
 Our Prescription method can accept new  EsomeprazoleAdapter() as a parameter because EsomeprazoleAdapter class implements Omeprazole.
 
 ![img_11.png](util.files/img_11.png)
+![img_12.png](util.files/img_12.png)
 
 
 
