@@ -137,6 +137,19 @@ Our Prescription method can accept new  EsomeprazoleAdapter() as a parameter bec
 ![img_11.png](util.files/img_11.png)
 ![img_12.png](util.files/img_12.png)
 
+## Behavioral 
+## Observer 
+
+ The observer pattern is a software design pattern in which an object, named the subject,
+ maintains a list of its dependents, called observers, and notifies them automatically of
+ any state changes, usually by calling one of their methods.
+
+ Example: FDA is a Subject, and it will notify all subscribed Pharmacies when new drug is approved
+   Once the pharmacy receives notification it will either add the drug to it's list or can ignore the new drug release
+   Pharmacies are allowed to unsubscribe from the FDA notification at anytime
+
+![img_14.png](util.files/img_14.png)
+
 
 
 
