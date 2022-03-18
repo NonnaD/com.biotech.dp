@@ -16,7 +16,6 @@ public class AppRunner {
 
         nurse.prescribe();
         primaryPhysician.prescribe();
-        Collections
     }
 }
 
