@@ -28,6 +28,9 @@ Factory Method- Uses Factory design pattern when you want to define the class of
 It also allows you to encapsulate object creation so that you can keep all object creation code in one place.
 
 Example: When creating new Provider User provides Provider type at runtime
+You might see some implementation of Factory method where creation defined as a static method.
+Benefits of this approach is - you do not need to instantiate an object to make use of the create method. 
+But this approach also has disadvantages - you can't subclass and change the behaviour of create method. 
 
 
 ![img_12.png](util.files/img_12.png)
