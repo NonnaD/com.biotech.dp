@@ -1,4 +1,4 @@
-package structural.unknown;
+package structural.adapter;
 
 public class AppRunner {
     public static void main(String[] args) {
@@ -8,9 +8,6 @@ public class AppRunner {
         System.out.println();
         System.out.println("New prescription policy applied");
         prescription.prescribeProtonPumpInhibitor(new EsomeprazoleAdapter(new Nexium()));
-
-
-     
     }
 }
 

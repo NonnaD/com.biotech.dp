@@ -153,6 +153,27 @@ Our Prescription method can accept new  EsomeprazoleAdapter() as a parameter bec
 
 ![img_14.png](util.files/img_14.png)
 
+## Structural
+## Facade 
+Facade pattern hides the complexities of the system and provides an interface to the client using which the client can access the system.
+Example: Client needs a functionality to order Medication for Patient 
+
+
+## Adapter
+Adapter is a structural design pattern that allows objects with incompatible interfaces to collaborate.
+The Adapter pattern allows otherwise incompatible classes to work together by converting the interface of one class into an interface expected by the clients.
+
+Example: Pharmacy discontinued Omeprazole family of drugs replacing it with Esomeprazole
+         But our legacy system prescription function accepts only Omeprazole family of drugs 
+         We cannot change the system and make it accept any other type of drugs 
+         
+`void prescribeProtonPumpInhibitor(Omeprazole medication)  ` 
+Create EsomeprazoleAdapter make it implement Omeprazole interface - any object created from EsomeprazoleAdapter will be treated by our system as Omeprazole 
+For EsomeprazoleAdapter class create constructor which will take Adaptee object as a parameter 
+@Override all Omeprazole functions but instead of implementing new functionality simply call corresponded functions of Adaptee 
+
+![img_15.png](util.files/img_15.png)
+
 
 
 

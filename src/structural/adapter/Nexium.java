@@ -1,4 +1,4 @@
-package structural.unknown;
+package structural.adapter;
 
 public class Nexium implements Esomeprazole{
 
